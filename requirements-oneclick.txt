@@ -1,8 +1,0 @@
-Flask[async]
-flask-cors
-playwright
-xhs
-biliup
-loguru
-qrcode
-requests
