@@ -142,6 +142,14 @@ DEBUG_SKIP_FINAL_PUBLISH = True
 
 本项目不保存、不收集用户账号密码。登录态、Cookie、素材文件和发布记录默认仅存储在用户本地环境中。
 
+### 本仓库包含什么
+
+- **包含**：后端源码（`main.py`、`uploader/`、`utils/`、`myUtils/`）与前端构建产物（`frontend/dist/`）。
+  本项目**没有前端源码（src）**，`frontend/dist/` 是唯一的前端产物，也是服务端实际托管的目录，因此必须随仓库提交。
+- **不包含**：`runtime/`（约 1GB 的内置 Python 运行时、Playwright 浏览器与 ffmpeg 等第三方依赖）。
+  它属于一键包发行物，体积远超源码仓库的合理范围。如需在本机直接跑起来，请另行获取完整的 `runtime/` 目录，
+  或参考 `requirements-oneclick.txt` 自行准备依赖后运行 `python main.py`。
+
 ## 开源来源与致谢
 
 本项目基于 [zydgmail/social-auto-upload](https://github.com/zydgmail/social-auto-upload) 进行二次开发，重点面向本地一键启动、可视化发布中心、多平台预发布检查和发布流程稳定性优化。
